@@ -1,0 +1,38 @@
+name: Task
+description: Technical work - investigation, optimization, maintenance.
+type: Task
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before submitting, set the **label** `priority: urgent`, `priority: high`, `priority: medium` or `priority: low` in the sidebar ([what each one means](https://github.com/datasantander/.github#priorities)).
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: Goal
+      description: What this work achieves and why it is needed now.
+    validations:
+      required: true
+
+  - type: textarea
+    id: done
+    attributes:
+      label: Definition of done
+      value: |
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+
+  - type: input
+    id: monday
+    attributes:
+      label: Monday item
+      description: Link to the related Monday item, if there is one.
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Context
+      description: Measurements, links, related issues.

@@ -1,0 +1,97 @@
+name: Bug
+description: Something does not work as it should.
+type: Bug
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before submitting, set in the sidebar:
+        - **Label** `priority: urgent`, `priority: high`, `priority: medium` or `priority: low` ([what each one means](https://github.com/datasantander/.github#priorities)).
+        - **Label** `regression` if it worked in an earlier version.
+
+  - type: textarea
+    id: goal
+    attributes:
+      label: What were you trying to do?
+      description: The goal, before the symptom.
+    validations:
+      required: true
+
+  - type: textarea
+    id: actual
+    attributes:
+      label: What happened?
+    validations:
+      required: true
+
+  - type: textarea
+    id: expected
+    attributes:
+      label: What did you expect?
+    validations:
+      required: true
+
+  - type: textarea
+    id: steps
+    attributes:
+      label: Steps to reproduce
+      description: As few and as precise as possible.
+      value: |
+        1.
+        2.
+        3.
+    validations:
+      required: true
+
+  - type: dropdown
+    id: environment
+    attributes:
+      label: Where was it seen?
+      multiple: true
+      options:
+        - Production
+        - QA
+        - Development
+        - Local
+    validations:
+      required: true
+
+  - type: input
+    id: version
+    attributes:
+      label: Version
+      description: Image tag, release or commit where it happens.
+    validations:
+      required: true
+
+  - type: input
+    id: last-working
+    attributes:
+      label: Last version where it worked
+      description: Only for regressions.
+
+  - type: textarea
+    id: impact
+    attributes:
+      label: Impact and workaround
+      description: Who is affected and how much. Is there a way around it meanwhile?
+    validations:
+      required: true
+
+  - type: input
+    id: monday
+    attributes:
+      label: Monday item
+      description: Link to the related Monday item, if there is one.
+
+  - type: textarea
+    id: evidence
+    attributes:
+      label: Evidence
+      description: Logs, screenshots, queries. Wrap long logs in `<details><summary>Logs</summary> ... </details>`.
+
+  - type: textarea
+    id: cause
+    attributes:
+      label: Cause and proposed fix
+      description: If it has been investigated. Link the code (file and line).

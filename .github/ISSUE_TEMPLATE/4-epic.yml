@@ -1,0 +1,49 @@
+name: Epic
+description: A large piece of work split into several issues.
+type: Epic
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before submitting, set the **label** `priority: urgent`, `priority: high`, `priority: medium` or `priority: low` in the sidebar ([what each one means](https://github.com/datasantander/.github#priorities)).
+        After creating it, add the issues that make up the work as **sub-issues**, so the epic shows their progress.
+
+  - type: textarea
+    id: outcome
+    attributes:
+      label: Outcome
+      description: What changes for users or for the team when this is finished.
+    validations:
+      required: true
+
+  - type: textarea
+    id: success
+    attributes:
+      label: How we measure success
+      description: A number or a check that tells us it worked.
+    validations:
+      required: true
+
+  - type: textarea
+    id: scope
+    attributes:
+      label: Scope
+      value: |
+        **In scope**
+        -
+
+        **Out of scope**
+        -
+    validations:
+      required: true
+
+  - type: textarea
+    id: risks
+    attributes:
+      label: Risks and open questions
+
+  - type: input
+    id: monday
+    attributes:
+      label: Monday item
+      description: Link to the related Monday item, if there is one.

@@ -1,0 +1,51 @@
+name: Feature
+description: New functionality or a visible improvement.
+type: Feature
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Before submitting, set the **label** `priority: urgent`, `priority: high`, `priority: medium` or `priority: low` in the sidebar ([what each one means](https://github.com/datasantander/.github#priorities)).
+
+  - type: textarea
+    id: problem
+    attributes:
+      label: Problem or need
+      description: What users cannot do today, or what costs them too much.
+    validations:
+      required: true
+
+  - type: textarea
+    id: proposal
+    attributes:
+      label: Proposed solution
+    validations:
+      required: true
+
+  - type: textarea
+    id: acceptance
+    attributes:
+      label: Acceptance criteria
+      description: How we know it is done.
+      value: |
+        - [ ]
+        - [ ]
+    validations:
+      required: true
+
+  - type: textarea
+    id: alternatives
+    attributes:
+      label: Alternatives considered
+
+  - type: input
+    id: monday
+    attributes:
+      label: Monday item
+      description: Link to the related Monday item, if there is one.
+
+  - type: textarea
+    id: context
+    attributes:
+      label: Additional context
+      description: Mockups, screenshots, links.
