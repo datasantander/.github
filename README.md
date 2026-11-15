@@ -31,3 +31,7 @@ Set with a label when the issue is created, and reviewed during triage.
 | Label | Meaning |
 |---|---|
 | `regression` | It worked in an earlier version. Add the last working version in the issue. |
+| `from: pr-review` | Follow-up findings from a pull request review. Not blocking that PR. Link the PR in the issue. |
+| `from: e2e-testing` | Found while building or reviewing the e2e test suite (stds4u-e2e). |
+
+`from: <source>` labels say where an issue came from. Add one only when the issue comes from that source, together with the priority label. Create the label in the repo with the same name and description if it does not exist yet.
